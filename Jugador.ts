@@ -8,3 +8,12 @@ export enum Deporte {
   Natacion = 'natacion',
   Gym = 'gym',
 }
+
+export class Jugador extends MiembroClub {
+  deporte: Deporte;
+
+  constructor(persona: MiembroClub, deporte: Deporte) {
+    super(persona, persona.miembroDesde);
+    this.deporte = deporte;
+  }
+}
